@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.Div1 {
+  float:left; 
+/*  background-color:Blue; 
+*/  width:50%; 
+  height: 800px;
+}
+
+.Div2 {
+/*  background-color: Green;
+*/  width: 50%;
+  float: right;
+  height: 800px;
+
+}
+
+.textArea1 {
+  height: 90%;
+  width: 90%;
+  font-size:16px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;    
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.probootsrap-nav {
+  padding-top: .5em;
+  margin-top: 0rem;
+  margin-bottom: 4rem; }
+  @media screen and (max-width: 1003px) {
+    .probootsrap-nav {
+      text-align: center; } }
+  .probootsrap-nav ul {
+    margin: 0;
+    padding: 0; }
+    .probootsrap-nav ul li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block; }
+      @media screen and (max-width: 480px) {
+        .probootsrap-nav ul li {
+          display: block; } }
+      .probootsrap-nav ul li a {
+        padding: .5rem 0rem;
+        margin: 0 .5rem;
+        display: block;
+        color: rgba(0, 0, 0, 0.4);
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        border-bottom: 2px solid transparent; }
+        @media screen and (max-width: 1431px) {
+          .probootsrap-nav ul li a {
+            margin: 0 .2rem; } }
+        @media screen and (max-width: 480px) {
+          .probootsrap-nav ul li a {
+            border-bottom: 2px solid transparent;
+            padding: .5rem 0rem; } }
+        .probootsrap-nav ul li a:hover {
+          color: rgba(0, 0, 0, 0.7); }
+      .probootsrap-nav ul li:first-child a {
+        margin-left: 0; }
+      .probootsrap-nav ul li.active a {
+        color: rgba(0, 0, 0, 0.7);
+        border-bottom: 2px solid #F96D00; }
+        @media screen and (max-width: 480px) {
+          .probootsrap-nav ul li.active a {
+            border-bottom: 2px solid transparent; } }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
