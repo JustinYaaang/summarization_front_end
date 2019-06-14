@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import logo from './logo.svg';
+// import PropTypes from 'prop-types'
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -19,14 +19,14 @@ class App extends React.Component {
         <div>
           <nav class="probootsrap-nav">
             <ul>
-              <li class="active"><a href="index.html">Submit Your Document</a></li>
+              <li class="active"><a href="/">Submitt Your Document</a></li>
               <li><a href="what-we-do.html"> </a></li>
-              <li><a href="what-we-do.html">Read The Translation</a></li>
+              <li><a href="read">Read The Translation</a></li>
 
             </ul>
           </nav>
         </div>
-
+        
         <div className="Div1">
           <textarea className="textArea1">
             I am a text area. I am a text area. I am a text area. I am a text area.
