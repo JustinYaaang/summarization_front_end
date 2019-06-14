@@ -106,3 +106,9 @@
   }
 }
 
+div.dragDiv {
+  max-width:70%;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
+

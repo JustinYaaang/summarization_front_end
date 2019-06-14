@@ -1,5 +1,6 @@
 import React from 'react';
 import './submitPage.css';
+import DragZone from './DragZone';
 
 
 class SubmitPage extends React.Component {
@@ -25,6 +26,21 @@ class SubmitPage extends React.Component {
 
             </ul>
           </nav>
+        </div>
+        <div>
+          <textarea placeholder="Paste the url here..."></textarea>
+        </div>
+
+        <div class="dragDiv">
+          <DragZone />
+        </div>
+
+        <div>
+          <textarea placeholder="Paste the content here..."></textarea>
+        </div>
+
+        <div>
+          <a href="read">Submit</a>
         </div>
 
       </div>
