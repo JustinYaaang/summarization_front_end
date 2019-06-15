@@ -1,13 +1,26 @@
 import React from 'react';
 import './submitPage.css';
 import DragZone from './DragZone';
-
+import postFile from './BackendService';
+import { Button } from "semantic-ui-react";
 
 class SubmitPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    postFile(
+      "AAA",
+      "AAA",
+      "bbb"
+    );
   }
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    console.log("AAA");
+  };
+
 
   render() {
     return (
@@ -40,7 +53,9 @@ class SubmitPage extends React.Component {
         </div>
 
         <div>
-          <a href="read">Submit</a>
+          <Button color="red" onClick={this.handleSubmit}>
+            Send
+          </Button>
         </div>
 
       </div>

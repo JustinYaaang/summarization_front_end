@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import SubmitPage from './submitPage';
-import * as serviceWorker from './serviceWorker';
 import {
   Route,
   BrowserRouter as Router,
