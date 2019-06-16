@@ -8,17 +8,18 @@ class SubmitPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    postFile(
-      "AAA",
-      "AAA",
-      "bbb"
-    );
+    
   }
 
   handleSubmit = e => {
     e.preventDefault();
 
     console.log("AAA");
+    postFile(
+      "AAA",
+      "AAA",
+      "bbb"
+    );
   };
 
 
