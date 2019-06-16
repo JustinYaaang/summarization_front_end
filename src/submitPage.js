@@ -1,13 +1,21 @@
 import React from 'react';
 import './submitPage.css';
+// import DropAndCrop from './DragZone2';
 import DragZone from './DragZone';
-import postFile from './BackendService';
+import DragZone3 from './DragZone3';
+
+import postPdf from './BackendService';
 import { Button } from "semantic-ui-react";
+
+const fileType = "pdf";
 
 class SubmitPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      filePath: ""
+    };
+
     
   }
 
@@ -15,11 +23,15 @@ class SubmitPage extends React.Component {
     e.preventDefault();
 
     console.log("AAA");
-    postFile(
-      "AAA",
+    postPdf(
+      fileType,
       "AAA",
       "bbb"
     );
+  };
+
+  handleChange = e => {
+    this.setState({ filePath: "filePath"});
   };
 
 
@@ -36,8 +48,6 @@ class SubmitPage extends React.Component {
               <li class="active"><a href="/">Submit Your Document</a></li>
               <li><a href="what-we-do.html"> </a></li>
               <li class="active"><a href="read">Read The Translation</a></li>
-
-
             </ul>
           </nav>
         </div>
@@ -58,6 +68,11 @@ class SubmitPage extends React.Component {
             Send
           </Button>
         </div>
+
+        <div>
+          <DragZone3 />
+        </div>
+
 
       </div>
 
