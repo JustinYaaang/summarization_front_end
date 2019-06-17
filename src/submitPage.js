@@ -14,23 +14,29 @@ class SubmitPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: "pdf"
+      filePath: ""
     };
+    this.change = this.change.bind(this);
+  }
+
+  change(filePath){
+    this.setState({filePath})
   }
 
   handleSubmit = e => {
     e.preventDefault();
+    console.log("new file path: " + this.state.filePath);
 
     console.log("AAA");
-    postPdf(
-      fileType,
-      "test.pdf"
-    );
+    // postPdf(
+    //   fileType,
+    //   "test.pdf"
+    // );
   };
 
-  handleChange = e => {
-    this.setState({ filePath: "filePath"});
-  };
+  // handleChange = e => {
+  //   this.setState({ filePath: "filePath"});
+  // };
 
 
   render() {
@@ -66,7 +72,7 @@ class SubmitPage extends React.Component {
         </div>
 
         <div>
-          <DragZone4 />
+          <DragZone4 change={this.change} />
         </div>
 
 

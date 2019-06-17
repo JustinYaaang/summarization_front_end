@@ -4,7 +4,9 @@ import Dropzone from 'react-dropzone'
 class DragZone4 extends Component {
 
   onDrop = (acceptedFiles) => {
-    console.log(acceptedFiles);
+    console.log(acceptedFiles[0].path);
+    // this.setState(state => ({ filePath: "A" }));
+    this.props.change(acceptedFiles[0].path);
   }
 
   render() {
