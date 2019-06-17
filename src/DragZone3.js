@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone'
 
+
 const DragZone3 = () => {
   const maxSize = 1048576;
 

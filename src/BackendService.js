@@ -4,7 +4,7 @@ const submitUrl = "https://essay-helper.herokuapp.com/submit";
 const testUrl = "http://localhost:2999/submit";
 
 
-const postPdf = async (fileType, file, message) => {
+const postPdf = async (fileType, file) => {
   const url = testUrl;
   const headers = {
     Type: fileType,
@@ -12,7 +12,7 @@ const postPdf = async (fileType, file, message) => {
   };
 
   var data = new FormData();
-  data.append('file', "ss");
+  data.append('file', file);
 
   axios
     .post(url, data, { headers: headers })

@@ -3,6 +3,7 @@ import './submitPage.css';
 // import DropAndCrop from './DragZone2';
 import DragZone from './DragZone';
 import DragZone3 from './DragZone3';
+import DragZone4 from './DragZone4';
 
 import postPdf from './BackendService';
 import { Button } from "semantic-ui-react";
@@ -13,10 +14,8 @@ class SubmitPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filePath: ""
+      filePath: "pdf"
     };
-
-    
   }
 
   handleSubmit = e => {
@@ -25,8 +24,7 @@ class SubmitPage extends React.Component {
     console.log("AAA");
     postPdf(
       fileType,
-      "AAA",
-      "bbb"
+      "test.pdf"
     );
   };
 
@@ -59,9 +57,7 @@ class SubmitPage extends React.Component {
           <DragZone />
         </div>
 
-        <div>
-          <textarea placeholder="Paste the content here..."></textarea>
-        </div>
+        
 
         <div>
           <Button color="red" onClick={this.handleSubmit}>
@@ -70,7 +66,7 @@ class SubmitPage extends React.Component {
         </div>
 
         <div>
-          <DragZone3 />
+          <DragZone4 />
         </div>
 
 
