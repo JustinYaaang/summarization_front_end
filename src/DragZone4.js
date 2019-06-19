@@ -19,7 +19,7 @@ class DragZone4 extends Component {
           minSize={0}
           maxSize={maxSize}
         >
-          {({getRootProps, getInputProps, isDragActive, isDragReject, rejectedFiles}) => {
+          {({getRootProps, getInputProps, isDragActive, isDragReject, acceptedFiles, rejectedFiles}) => {
             const isFileTooLarge = rejectedFiles.length > 0 && rejectedFiles[0].size > maxSize;
             return (
               <div {...getRootProps()}>
@@ -32,7 +32,15 @@ class DragZone4 extends Component {
                     File is too large.
                   </div>
                 )}
+<ul className="list-group mt-2">
+  {acceptedFiles.length > 0 && acceptedFiles.map(acceptedFile => (
+    <li className="list-group-item list-group-item-success">
+      {acceptedFile.name}
+    </li>
+  ))}
+</ul>
               </div>
+
             )}
           }
         </Dropzone>

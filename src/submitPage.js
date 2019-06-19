@@ -25,13 +25,14 @@ class SubmitPage extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    
+    console.log("AAA");
     console.log("new file path: " + this.state.filePath);
 
-    console.log("AAA");
-    // postPdf(
-    //   fileType,
-    //   "test.pdf"
-    // );
+    postPdf(
+      fileType,
+      this.state.filePath
+    );
   };
 
   // handleChange = e => {
