@@ -5,7 +5,7 @@ import DragZone from './DragZone';
 import DragZone3 from './DragZone3';
 import DragZone4 from './DragZone4';
 
-import postPdf from './BackendService';
+
 import { Button } from "semantic-ui-react";
 
 const fileType = "pdf";
@@ -23,17 +23,7 @@ class SubmitPage extends React.Component {
     this.setState({filePath})
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    
-    console.log("AAA");
-    console.log("new file path: " + this.state.filePath);
 
-    postPdf(
-      fileType,
-      this.state.filePath
-    );
-  };
 
   // handleChange = e => {
   //   this.setState({ filePath: "filePath"});
@@ -67,9 +57,10 @@ class SubmitPage extends React.Component {
         
 
         <div>
-          <Button color="red" onClick={this.handleSubmit}>
-            Send
-          </Button>
+          <form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+             <input id="fileupload" name="myfile" type="file" />
+             <input type="submit" value="submit" id="submit" />
+          </form>
         </div>
 
         <div>
