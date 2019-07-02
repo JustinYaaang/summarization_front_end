@@ -1,14 +1,12 @@
 import React from 'react';
 import './submitPage.css';
-// import DropAndCrop from './DragZone2';
 import DragZone from './DragZone';
-import DragZone3 from './DragZone3';
 import DragZone4 from './DragZone4';
-
-
 import { Button } from "semantic-ui-react";
 
+const submitUrl = "http://localhost:2999/submit";
 const fileType = "pdf";
+
 
 class SubmitPage extends React.Component {
   constructor(props) {
@@ -54,10 +52,8 @@ class SubmitPage extends React.Component {
           <DragZone />
         </div>
 
-        
-
         <div>
-          <form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+          <form id="uploadbanner" enctype="multipart/form-data" method="post" action={submitUrl}>
              <input id="fileupload" name="myfile" type="file" />
              <input type="submit" value="submit" id="submit" />
           </form>
